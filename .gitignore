@@ -1,0 +1,37 @@
+# Ignora i file di ambiente
+.env
+.env.*
+
+# Ignora le cartelle node_modules
+node_modules/
+
+# Ignora i log
+logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignora i file delle IDE
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Ignora file di sistema
+.DS_Store
+Thumbs.db
+
+# Ignora build di Expo e Next.js
+apps/*/.expo/
+apps/*/build/
+apps/*/.next/
+apps/*/out/
+
+# Ignora cartelle di build generali
+packages/*/build/
+
+node_modules/

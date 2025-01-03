@@ -1,0 +1,24 @@
+{
+  "name": "turborepo-smanetting",
+  "private": true,
+  "packageManager": "pnpm@7.0.0",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "dev:web": "turbo run dev --filter web...",
+    "dev:operator": "turbo run dev --filter operator-app...",
+    "dev:manager": "turbo run dev --filter manager-app...",
+    "dev:all": "concurrently \"pnpm dev:web\" \"pnpm dev:operator\" \"pnpm dev:manager\" --names \"WEB,OPERATOR,MANAGER\" --prefix-colors \"cyan,magenta,yellow\"",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "clean:workspaces": "turbo run clean"
+  },
+  "devDependencies": {
+    "@turborepo-smanetting/ui": "workspace:*",
+    "concurrently": "^9.1.2",
+    "prettier": "latest",
+    "turbo": "latest",
+    "typescript": "latest"
+  }
+}
